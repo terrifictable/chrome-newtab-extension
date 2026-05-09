@@ -1,0 +1,16 @@
+{
+  "name": "startpage",
+  "description": "a simple custom startpage",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "tabs", "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/icon-light.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "startpage/startpage.html"
+  }
+}

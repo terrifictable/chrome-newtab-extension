@@ -1,0 +1,130 @@
+@use 'sass:color';
+
+$bg: hsl(180, 3%, 12%);
+$fg: hsl(180, 5%, 84%);
+
+$clock_font: 'JetBrainsMonoNL NFM', monospace;
+$clock_size: 40px;
+$date_font: 'JetBrainsMonoNL NFM', monospace;
+$date_size: calc($clock_size - 10px);
+$date_color: color.scale($fg, $lightness: -30%);
+
+
+$box_font: 'JetBrainsMonoNL NFM', monospace;
+$box_font_size: 18px;
+$box_width: 150px;
+$box_bg: color.scale($bg, $lightness: -30%);
+$box_border: solid color.scale($box_bg, $lightness: -30%) 2px;
+$box_header_fg: hsl(180, 70%, 30%);
+
+$link_font: $box_font;
+$link_size: 14px;
+$link_color: color.scale($fg, $lightness: -20%);
+$link_hover_color: color.scale($box_header_fg, $lightness: +30%);
+
+$shortcut_font: $box_font;
+$shortcut_size: 10px;
+$shortcut_color: color.scale($fg, $lightness: -20%);
+
+
+body {
+  background-color: $bg;
+  color: $fg;
+  
+  #content {
+    width: 99vw;
+    height: 98vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    #search {
+      opacity: 0;
+      position: absolute;
+    }
+
+    #wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      #header {
+        display: flex;
+        flex-direction: inherit;
+        align-items: inherit;
+        line-height: $clock_size;
+        margin: 2em;
+        
+        #time {
+          font-family: $clock_font;
+          font-weight: bold;
+          font-size: $clock_size;
+        }
+  
+        #date {
+          font-family: $date_font;
+          font-size: $date_size;
+          color: $date_color;
+        }
+      }
+
+      #boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+
+        .box {
+          display: flex;
+          flex-direction: column;
+
+          padding: 1em;
+          border-radius: 0.25em;
+          border: $box_border;
+          background-color: $box_bg;
+          width: $box_width;
+          transition: all 0.2s;
+ 
+          &:hover {
+            transform: scale(102%);
+          }
+
+          .box-header {
+            font-family: $box_font;
+            font-size: $box_font_size;
+            margin-bottom: 0.5em;
+            color: $box_header_fg;
+          }
+
+          .bookmark {
+            &:hover .link {
+              color: $link_hover_color;
+            }
+
+            .link {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              
+              font-family: $link_font;
+              font-size: $link_size;
+              color: $link_color;
+              text-decoration: none;
+              padding-bottom: 0.1em;
+
+              .shortcut {
+                align-items: center;
+                display: flex;
+
+                font-family: $shortcut_font;
+                font-size: $shortcut_size;
+                color: $shortcut_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

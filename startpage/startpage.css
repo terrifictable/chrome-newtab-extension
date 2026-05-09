@@ -1,0 +1,82 @@
+body {
+  background-color: hsl(180, 3%, 12%);
+  color: hsl(180, 5%, 84%);
+}
+body #content {
+  width: 99vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #content #search {
+  opacity: 0;
+  position: absolute;
+}
+body #content #wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body #content #wrapper #header {
+  display: flex;
+  flex-direction: inherit;
+  align-items: inherit;
+  line-height: 40px;
+  margin: 2em;
+}
+body #content #wrapper #header #time {
+  font-family: "JetBrainsMonoNL NFM", monospace;
+  font-weight: bold;
+  font-size: 40px;
+}
+body #content #wrapper #header #date {
+  font-family: "JetBrainsMonoNL NFM", monospace;
+  font-size: 30px;
+  color: hsl(180, 5%, 58.8%);
+}
+body #content #wrapper #boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+body #content #wrapper #boxes .box {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 0.25em;
+  border: solid hsl(180, 3%, 5.88%) 2px;
+  background-color: hsl(180, 3%, 8.4%);
+  width: 150px;
+  transition: all 0.2s;
+}
+body #content #wrapper #boxes .box:hover {
+  transform: scale(102%);
+}
+body #content #wrapper #boxes .box .box-header {
+  font-family: "JetBrainsMonoNL NFM", monospace;
+  font-size: 18px;
+  margin-bottom: 0.5em;
+  color: hsl(180, 70%, 30%);
+}
+body #content #wrapper #boxes .box .bookmark:hover .link {
+  color: hsl(180, 70%, 51%);
+}
+body #content #wrapper #boxes .box .bookmark .link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "JetBrainsMonoNL NFM", monospace;
+  font-size: 14px;
+  color: hsl(180, 5%, 67.2%);
+  text-decoration: none;
+  padding-bottom: 0.1em;
+}
+body #content #wrapper #boxes .box .bookmark .link .shortcut {
+  align-items: center;
+  display: flex;
+  font-family: "JetBrainsMonoNL NFM", monospace;
+  font-size: 10px;
+  color: hsl(180, 5%, 67.2%);
+}
