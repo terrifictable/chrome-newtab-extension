@@ -9,10 +9,6 @@ body #content {
   justify-content: center;
   align-items: center;
 }
-body #content #search {
-  opacity: 0;
-  position: absolute;
-}
 body #content #wrapper {
   display: flex;
   align-items: center;
@@ -79,4 +75,8 @@ body #content #wrapper #boxes .box .bookmark .link .shortcut {
   font-family: "JetBrainsMonoNL NFM", monospace;
   font-size: 10px;
   color: hsl(180, 5%, 67.2%);
+  letter-spacing: 0.25em;
+}
+body #content #wrapper #boxes .box .bookmark .highlight {
+  color: hsl(180, 70%, 44%);
 }

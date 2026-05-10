@@ -39,11 +39,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    #search {
-      opacity: 0;
-      position: absolute;
-    }
-
     #wrapper {
       display: flex;
       align-items: center;
@@ -120,7 +115,12 @@ body {
                 font-family: $shortcut_font;
                 font-size: $shortcut_size;
                 color: $shortcut_color;
+                letter-spacing: 0.25em;
               }
+            }
+            
+            .highlight {
+              color: color.scale($box_header_fg, $lightness: +20%);
             }
           }
         }
