@@ -75,9 +75,10 @@ body {
           flex-direction: column;
 
           padding: 1em;
+          background-color: $box_bg;
           border-radius: 0.25em;
           border: $box_border;
-          background-color: $box_bg;
+          box-shadow: $box_bg 0 0 5px;
           width: $box_width;
           transition: all 0.2s;
  

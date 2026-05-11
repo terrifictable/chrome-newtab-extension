@@ -41,9 +41,10 @@ body #content #wrapper #boxes .box {
   display: flex;
   flex-direction: column;
   padding: 1em;
+  background-color: hsl(180, 3%, 8.4%);
   border-radius: 0.25em;
   border: solid hsl(180, 3%, 5.88%) 2px;
-  background-color: hsl(180, 3%, 8.4%);
+  box-shadow: hsl(180, 3%, 8.4%) 0 0 5px;
   width: 150px;
   transition: all 0.2s;
 }
